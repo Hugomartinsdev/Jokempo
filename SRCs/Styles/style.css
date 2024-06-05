@@ -1,0 +1,98 @@
+body{
+    background-color: rgb(39, 40, 71);
+}
+.inicio{
+    display: flex;
+    /*position: fixed; por algum motivo isso buga todo o design do site*/
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    padding: 7px;
+    background:linear-gradient(to right, rgb(149, 71, 223), rgb(53, 128, 158));
+}
+.inicio .title{
+    margin-left:103vh/*620px*/;
+    font-weight:700;
+    font-size: 30px;
+}
+
+.inicio .rules{
+    border: 1px solid;
+}
+.inicio .rules .subtitle{
+    margin-left:85vh;
+    font-weight: 600;
+}
+.inicio .rules .text{
+    color:#121212;
+    margin-top: 2vh;/*1%;*/
+    margin-left: 95vh; /*35%;*/
+}
+
+.inicio .rules .reset{
+    margin-bottom:2vh;
+    margin-left: 40vh;
+}
+
+.fields{
+    background-color: rgb(75, 0, 126);
+    margin : 20px;
+    padding: 20px;/*isso está fazendo aumentar a tela dele no final da pagina,talvez não precisae caso eu use um footer*/
+}
+
+.fieldPlayer .imagem img {
+    width:115px;
+}
+
+.fieldPlayer .jogar{
+    margin: 10px;
+}
+
+.fieldBot{
+    position: relative;/* relative:Comportamento em relação a si mesmo: O elemento é posicionado em relação à sua posição original.
+                        Mantém espaço original: O espaço original que o elemento ocuparia não é alterado, mas você pode movê-lo com top, right, bottom ou left. */
+    bottom: 137px;
+    margin-left:160vh/*70%*/;
+   
+    
+}
+
+.fieldBot .imagem img {
+    width:115px;
+}
+
+.mieldField{
+    position: relative;
+}
+
+
+.musica{
+    opacity: 0;
+}
+
+.inicio .rules .reset .retb{
+    font-weight: 600;    
+}
+
+.fields .fieldPlayer .jogar .comb{
+    font-weight: 600;
+}
+
+.fields .fieldPlayer .pontJ .pontT{
+    font-weight: 600;
+}
+
+.fields .fieldBot .pointBot .pontB{
+    font-weight: 600;
+}
+
+.fields .mieldField .rod{
+    font-weight: 600;
+}
+
+
+/*depois ver a converção de px para aquela outa medida acho que é vw ou rem*/
+
+/*OQUE FALTA 
+1-VER SE EU ENDIREITO A IMAGEM DO PAPEL
+2-usar nos botoes a tag cursor e pointer,para ficar bonitinho

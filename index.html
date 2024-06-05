@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="SRCs/Styles/reset.css">
+    <link rel="stylesheet" href="SRCs/Styles/style.css">
+    <link rel="shortcut icon" href="./SRCs/assets/IMGs/transferir-Photoroom.png" type="image/x-icon" /><!--aqui é onde se muda a imagem dosite ,que fica do lado nome do site sabe-se pelo rel e não pelo type-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+    integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+    <title>Jokempo 1 player</title>
+</head>
+<body>
+    <div class="inicio">
+            <div class="title">
+                <span>Jokempo</span>
+            </div>
+            <div class="rules">
+                <span class="subtitle">Regras:</span>
+                <ol class="text">
+                    <li>Escolha a sua opção entre pedra, papel, e tesoura.</li>
+                    <li>Aperte o botão para jogar.</li>
+                    <li>Cada vitoria da 2 pontos e empate 1 ponto para cada.</li><!--ver porque eles perderam os números-->
+                    <li>Depois de 5 rodadas quem tiver ganhado mais pontos ganha o jogo.</li>
+                </ol>
+                <Button onclick="zerar()" class="reset">
+                   <span class="retb"> Reiniciar</span>
+                </Button><!--mexer no ver se ele não fica melhor em algum lugar-->
+            </div>
+    </div>
+        
+            <div class="fields">
+                <div class="fieldPlayer">
+                    <!--tentar colocar as imagens quando for escrevendo as opções-->
+                    <select id="escolhaJogador">
+                        <option value="0">Pedra</option>
+                        <option value="1">Papel</option>
+                        <option value="2">Tesoura</option>
+                    </select>
+
+                    <div class="jogar" >
+                        <button onclick="rodada()">
+                           <span class="comb">começar</span>
+                        </button>
+                    </div>
+
+                    <div class="imagem">
+                        <img src=""  id="EscolhaP">
+                    </div>
+
+                    <div class="pontJ">
+                        <span class="pontT" id="pointJ">
+                            
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="fieldBot">
+                    <div class="imagem">
+                        <img src=""  id="EscolhaB">
+                    </div>
+                    <div class="pointBot">
+                        <span class="pontB" id="pointB"></span>
+                    </div>
+                    
+
+                </div>
+
+                <div class="mieldField">
+                    <p id="round">
+                        <span class="rod">Rodada:0</span>
+                    </p>
+                </div>
+
+                <div class="output">
+                    <p id="resultado"></p>
+                </div>
+
+                <audio  controls autoplay  id="musica2" class="musica">
+                    <source src="" type="audio/mpeg">
+                  </audio>
+                  <audio controls loop autoplay id="musica" class="musica">
+                    <source src="SRCs/assets/audios/WhatsApp Audio 2023-06-15 at 22.42.26.mpeg" type="audio/mpeg">
+                  </audio>
+            </div>
+           
+        
+</body>
+</html>
+
+<!--no final depois de terminar o de 2 players fazer uma tela de menu para a pessoa escolher qual dos dois modos jogar e um botão para o menu,
+talvez fazer com clicar tecla do teclado-->
+
+<!--OQUE FALTA
+    1-TENTAR COLOCAR O FUNDO ONDE ACONTECE O JOGO POR TODO O RESTO DA TELA ,OU PELO MENOS DEIXA O MESMO COMPRIMENTO E SO AUMENTAR A LARGURA ATÉ O FINAL DA PAGINA
+    2-COLOCAR O MENU DE OPÇÃO,PARA VOLTAR AO MEN DO SITE, AINDA VOU CRIAR, E TALVEZ,PROVAVELMENTE NÃO,UM BOTAO PARA IR DIRETO PARA O DE 2 PLAYERS
+    3-TENTAR USAR OS BOTOES DO 2 COMO BOTÃO NO TECLADO
+    4-QUANDO FOR ESCOLHER AS OPÇOES APARECER IMAGENZINHAS SIMBOLICAS DE CADA OPÇÃO
+    5-Procurar como autocarrega os audios no site,para tocar assimque carrega a pagina,perguntar para algum pprofessor se sabe
+    6-ESTUDAR SOBRE OS AUDIOS
+
+-->
