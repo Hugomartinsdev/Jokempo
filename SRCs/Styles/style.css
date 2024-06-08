@@ -3,7 +3,6 @@ body{
 }
 .inicio{
     display: flex;
-    /*position: fixed; por algum motivo isso buga todo o design do site*/
     flex-direction: column;
     left: 0;
     right: 0;
@@ -34,10 +33,20 @@ body{
     margin-left: 40vh;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+}
+
 .fields{
     background-color: rgb(75, 0, 126);
-    margin : 20px;
-    padding: 20px;/*isso está fazendo aumentar a tela dele no final da pagina,talvez não precisae caso eu use um footer*/
+    margin : 5vh 0 0 10vh;
+    height: 380px;
+    width: 900px;
+}
+
+.fieldPlayer{
+    margin-left: 10vh;
 }
 
 .fieldPlayer .imagem img {
@@ -48,13 +57,16 @@ body{
     margin: 10px;
 }
 
+.choiceP{
+    cursor: pointer;
+}
+
 .fieldBot{
-    position: relative;/* relative:Comportamento em relação a si mesmo: O elemento é posicionado em relação à sua posição original.
-                        Mantém espaço original: O espaço original que o elemento ocuparia não é alterado, mas você pode movê-lo com top, right, bottom ou left. */
+    display: flex;
+    justify-content: center;
+    position: relative;/* relative:Comportamento em relação a si mesmo: O elemento é posicionado em relação à sua posição original.*/
     bottom: 137px;
-    margin-left:160vh/*70%*/;
-   
-    
+    left:41vh;
 }
 
 .fieldBot .imagem img {
@@ -62,12 +74,13 @@ body{
 }
 
 .mieldField{
-    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
-
-.musica{
-    opacity: 0;
+.output{
+    display: flex;
+    justify-content: center;
 }
 
 .inicio .rules .reset .retb{
@@ -80,9 +93,13 @@ body{
 
 .fields .fieldPlayer .pontJ .pontT{
     font-weight: 600;
+    margin:0,0,10vh;
 }
 
 .fields .fieldBot .pointBot .pontB{
+    position:relative;
+    top: 18vh;
+    right:20vh;
     font-weight: 600;
 }
 
@@ -91,8 +108,9 @@ body{
 }
 
 
-/*depois ver a converção de px para aquela outa medida acho que é vw ou rem*/
+/*terminar de fazer as modificações dentro do card onde acontece o jogo
+
+
 
 /*OQUE FALTA 
 1-VER SE EU ENDIREITO A IMAGEM DO PAPEL
-2-usar nos botoes a tag cursor e pointer,para ficar bonitinho

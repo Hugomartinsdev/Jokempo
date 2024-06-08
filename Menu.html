@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="menu.js"></script>
+    <link rel="stylesheet" href="SRCs/Styles/reset.css">
+    <link rel="stylesheet" href="SRCs/Styles/Menustyle.css">
+    <link rel="shortcut icon" href="./SRCs/assets/IMGs/transferir-Photoroom.png" type="image/x-icon" /><!--aqui é onde se muda a imagem dosite ,que fica do lado nome do site sabe-se pelo rel e não pelo type-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+    integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+    <title>Menu</title>
+</head>
+<body>
+    <div class="screenMenu">
+        <div class="menu">
+            <div class="title">
+            <span> menu</span>
+            </div>
+            <div class="name">
+               <span>jokempo</span>
+            </div>
+            <div class="InterativePart">
+                <div class="text">
+                    <span>Qual modo de jogo você quer jogar?</span>
+                </div>
+                <div class="choices">
+                        <a href=""><!--quando eu fizer os do player-->
+                            <button class="choice1">
+                                Player vs Player
+                            </button>
+                        </a>
+                        <a href="pvb.html">
+                            <button class="choice2">
+                                Player vs Bot
+                            </button>
+                        </a>
+                </div>
+                <div class="config">
+                    <div class="music">
+                        <div class="textMusic">
+                            <span>Música:</span>
+                        </div>
+                        <button class="musicButton" onclick="musicon()">
+                            <span id="MusicBt">off</span><!-- colocar o simbolozinho de som para colocar e tirar som, quem sabe fazer uma animação de mudo e nao mudo-->
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio  loop id="musicplayer">
+        <source src="SRCs/assets/audios/musica de fundo.mpeg" type="audio/mpeg">
+      </audio>
+</body>
+</html>
+
+<!--
+1-ver se consigo algum jeito de coloca imagem de volume
+2se conseguir consiliar a troca de imagem,mudo e com som, com a cdigo do js, se a primeira for concluida com suceso -
+3-talvez fazer com clicar tecla do teclado as escolhas
+4- se conseguir fazer a 3 botar uma opção com fechar a janela(sair do jogo)
+5- se conseguir implementar a 4 implementar nos outros um esquema parecido, mas tentar fazer um tres linhas e quando apertar aparecer opçoes de voltar ao menu e sair->

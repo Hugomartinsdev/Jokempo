@@ -1,9 +1,6 @@
-var r=0,pj=0,pb=0;
-//document.getElementById("musica").play();//talvez fazer um menu com musica, talvez usa botão ou teclado do mouse mesmo
-//para burlar caso não consiga, fazer um botão para ativae e desativar o som,começado com ele desativado, ]
-//ai quando ativa é o play e quanod desativa é o pause.
+let r=0,pj=0,pb=0,playmusic=true;
 
-function rodada(params) {
+function rodada() {
     const j1=document.getElementById("escolhaJogador").value;
     const b1=Math.floor(Math.random()*3);
 
@@ -29,7 +26,7 @@ function rodada(params) {
             pb++;
         }
         r++;
-        document.getElementById("round").innerHTML=`Rodada: ${r}`;
+        document.getElementById("round").innerHTML= `<b>Rodada: ${r}<b>`;
         document.getElementById("pointJ").innerHTML="Pontuação do jogador: "+pj;
         document.getElementById("pointB").innerHTML="Pontuação do BOT: "+pb;
     }
@@ -55,7 +52,7 @@ function rodada(params) {
             pj=pj+2;
         }
         r++;
-        document.getElementById("round").innerHTML=`Rodada: ${r}`;
+        document.getElementById("round").innerHTML=`<b>Rodada: ${r}<b>`;
         document.getElementById("pointJ").innerHTML="Pontuação do jogador: "+pj;
         document.getElementById("pointB").innerHTML="Pontuação do bOT: "+pb;
     }
@@ -80,25 +77,28 @@ function rodada(params) {
             pb=pb+2;
         }
         r++;
-        document.getElementById("round").innerHTML=`Rodada: : ${r}`;
+        document.getElementById("round").innerHTML=`<b>Rodada: ${r}<b>`;
         document.getElementById("pointJ").innerHTML="Pontuação do jogador: "+pj;
         document.getElementById("pointB").innerHTML="Pontuação do BOT: "+pb;
     }
     if(r==5){
         if (pj>pb) {
-            setTimeout(alert,410,"Parábens voce ganhou!!");
+            setTimeout(alert,110,"Parábens voce ganhou!!");//ou acelerar mais isso ou atrassar a musica,mais facil mexer aqui
             document.getElementById("musica2").src="SRCs/assets/audios/06-caught-a-pokemon.mp3";
+            document.getElementById("musica2").play();
             //setTimeout(Reiniciar,1,"o");
             //Reiniciar();
         }else if(pj==pb){
             setTimeout(alert,410,"Nossa que loucura deu empate!!!");
             document.getElementById("musica2").src="SRCs/assets/audios/139-item-catch.mp3";
+            document.getElementById("musica2").play();
             //Reiniciar();
             //setTimeout(Reiniciar,1,"o");
         }
         else{
             setTimeout(alert,410,"Que pena você perdeu!!!");
             document.getElementById("musica2").src="SRCs/assets/audios/super-mario-death-sound-sound-effect.mp3";
+            document.getElementById("musica2").play();
             //setInterval(Reiniciar,5,"o");
             //Reiniciar();
 
@@ -107,31 +107,45 @@ function rodada(params) {
         alert("reiniciando automaticamente");
         zerar();
     }
-    //se perder ou fazer vaia ou fazer o barulho de gameover do Mario;
     //ver se ficar mais legal aparecendo um alert ou na tela mesmo
-    //talcez colocar as opções de jogo no meio
+    //talvez colocar as opções de jogo no meio
     
 }
 
-function zerar(params) {
+function zerar() {
     r=0;
     pb=0;
     pj=0
     document.getElementById("EscolhaP").src="";
     document.getElementById("EscolhaB").src="";
-    document.getElementById("round").innerHTML="Rodada: "+r;
+    document.getElementById("round").innerHTML=`<b>Rodada: ${r}<b>`
     document.getElementById("resultado").innerHTML="";
     document.getElementById("pointJ").innerHTML=" ";
     document.getElementById("pointB").innerHTML=" ";
+    document.getElementById("musica2").src="";
 }
 
+function musicon(){
+    if (playmusic == true) {
+        document.getElementById("musica").play();
+        document.getElementById("MusicBt").innerText="on";
+        playmusic=false
+    }else{
+        document.getElementById("musica").pause();
+        document.getElementById("musica").currentTime=0;
+        document.getElementById("MusicBt").innerText="off";
+        playmusic=true;
+
+    }
+}
+
+
+//fase de teste
 function Reiniciar(){
     var t =prompt("Você quer reiniciar automaticamente?");
     if(t=="sim" || t==""){
         alert("ok,reiniciando");//talvez fazer um coisa continuo,
                                 //acho que tem coisa de deixar a mensagem continuo 
-                                //no meu drive ou github de alguem que eu sigo, 
-                               //ou pergunto para o Carlos ou Casseb 
         zerar();
 
     }else if(t=="não" || t=="nao"){
@@ -143,6 +157,5 @@ function Reiniciar(){
 
 /*OQUE FALTA FAZER
 1-TENTAR FAZER EM UM WHILE, fazer isso em um outro codigo
-2-COLOCAR OS AUDIOS DE FUNDO E DE VITORIA E DERROTA
-3-usar um prompt ou alert com sim e não para ver ve a pessoa que que seja reiniciado o jogo automaticamente, e ver isso talvez no meu do FNAF,não está funcionando.
-4-TENTAR FAZER FUNCIONAR O PROMPT COM A FINÇÃO REINICIAR*/
+2-usar um prompt ou alert com sim e não para ver ve a pessoa que que seja reiniciado o jogo automaticamente.
+3-TENTAR FAZER FUNCIONAR O PROMPT COM A FINÇÃO REINICIAR*/
