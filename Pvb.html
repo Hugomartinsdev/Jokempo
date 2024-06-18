@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Pvb.js"></script>
+    <link rel="stylesheet" href="SRCs/Styles/reset.css">
+    <link rel="stylesheet" href="SRCs/Styles/Pvbstyle.css">
+    <link rel="shortcut icon" href="./SRCs/assets/IMGs/transferir-Photoroom.png" type="image/x-icon" /><!--aqui é onde se muda a imagem dosite ,que fica do lado nome do site-->
+    <title>Jokempo 1 player</title>
+</head>
+<body>
+    <div class="inicio">
+            <div class="title">
+                <span>Jokempo PvB</span>
+            </div>
+            <div class="rules">
+                <span class="subtitle">Regras:</span>
+                <ol class="text">
+                    <li>Escolha a sua opção entre pedra, papel, e tesoura.</li>
+                    <li>Aperte o botão começar para jogar.</li>
+                    <li>Cada vitoria da 2 pontos e empate 1 ponto para cada.</li>
+                    <li>Depois de 5 rodadas quem tiver ganhado mais pontos ganha o jogo.</li>
+                </ol>
+                <p class="obs">OBS:Pode ser usado as teclas do teclado para escolher as opçoes</p>
+                <Button onclick="zerar()" class="reset">
+                   <span class="retb"> Reiniciar</span>
+                </Button>
+            </div>
+            <div class="config">
+                <div class="music">
+                    <div class="textMusic">
+                        <span>Música:</span>
+                    </div>
+                    <button class="musicButton" onclick="musicon()">
+                        <span id="MusicBt">off</span>
+                    </button>
+                </div>
+                <div class="back">
+                    <a href="Menu.html">
+                        <button class="BackButton" >
+                            <span class="menuB">Menu</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+    </div>
+        
+        <div class="container">
+            <div class="fields">
+                <div class="RoundField">
+                    <p id="round" class="rod">
+                        Rodada: 0
+                    </p>
+                </div>
+                <div class="fieldPlayer">
+                    <!--tentar colocar as imagens quando for escrevendo as opções-->
+                    <select id="escolhaJogador" class="choiceP">
+                        <option value="0">escolha</option>
+                        <option value="1">1-Pedra</option>
+                        <option value="2">2-Papel</option>
+                        <option value="3">3-Tesoura</option>
+                    </select>
+
+                    <div class="jogar" >
+                        <button class="PlayButton" onclick="rodada()">
+                           <span class="comb">disputa</span>
+                        </button>
+                    </div>
+                    <div class="imagem">
+                        <img src="" id="EscolhaP">
+                    </div>
+                    <div class="pontJ">
+                        <span class="pontT" id="pointJ"></span>
+                    </div>
+                </div>
+                <div class="fieldBot">
+                    <div class="imagem">
+                        <img src=""  id="EscolhaB">
+                    </div>
+                    <div class="pointBot">
+                        <span class="pontB" id="pointB"></span>
+                    </div>
+                </div>
+                <div class="output">
+                    <p id="resultado"></p>
+                </div>
+            </div>
+        </div>
+        <audio  id="musica2" class="musica">
+            <source src="" type="audio/mpeg">
+          </audio>
+          <audio loop id="musica" class="musica">
+            <source src="SRCs/assets/audios/musica de fundo.mpeg" type="audio/mpeg">
+          </audio>
+        
+</body>
+</html>
+
+<!--OQUE FALTA
+    1-TENTAR USAR OS BOTOES DO 1 COMO BOTÃO NO TECLADO
+    2-QUANDO FOR ESCOLHER AS OPÇOES APARECER IMAGENZINHAS SIMBOLICAS DE CADA OPÇÃO,NÃO FAÇO IDEIA COMO SE FAZ
+    3-VER SE EU GOSTO DAS REGRAS NUMA CAIXA MENOR OU SE COBRINDO TODA A TELA TA BOM
+    4-VER SE EU CONSIGO PADRONIZAR AS COISAS COM OS TAMANHOS DE ZOOM DAS TELAS 
+    (EX:100% FICA DIFERENTE O DESGIND DO QUE DE 90%)
+    5-TESTAR SE AS PESSOAS GOSTAM MAIS DE COLOCAR A OPÇÃO COM O TECLADO OU COM A CAIXA DE OPÇOES MESMO-->
+    

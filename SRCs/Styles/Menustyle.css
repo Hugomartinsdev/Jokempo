@@ -16,19 +16,17 @@ body{
     display: flex; 
     justify-content: center;
     font-weight: 700;
-    margin-top:15vh;
+    margin-top: 80px;
     font-size: 20px;
     text-transform: uppercase;
-    left: 0.2vh;
 }
 .menu .name{
     display: flex; 
     justify-content: center;
     font-weight: 700;
-    margin-left:3vh;
     font-size: 30px;
-    margin-top: 5vh;
-    margin-left: 2vh;
+    margin-top: 40px;
+    margin-left:8px;
     text-transform: uppercase;
 }
 
@@ -36,10 +34,9 @@ body{
     display: flex; 
     justify-content: center;
     font-weight: 510;
-    margin-top: 10vh;
-    display: flex;
+    margin-top: 40px;
     padding: 10px;
-    margin-left:2vh;
+    margin-left: 11px;
 }
 
 .menu .InterativePart .choices{
@@ -62,22 +59,32 @@ body{
     justify-content: center;
     border-radius: 5px;
     position: relative;
-    left:50vh;
-    bottom:2.8vh;
-}/* tentar ver porque ele não esta ficando certo quando eu dou f11*/
+    left: 300px;
+    bottom: 17px;
+    
+}
+
+.obs{
+    width: 450px;
+}
 
 .config{
-    margin-left:5vh;
+    margin-left:20px;
 }
 
 .config .music .textMusic{
     margin-top:90px;
 }
 
-.config .music .musicButton{/*ver porque raios ele fica mudando com o f11*/
-    position: fixed;
-    bottom:18.7vh;
-    left:86vh;
-    border-radius:5px ;
-    background: none;/*ver se ficar melhor sem fundo, com fundo, ou fundo melhor*/
+.config .music .musicButton{
+    display: flex; 
+    justify-content: center;
+    position: relative;
+    bottom:16px;
+    left:50px;
+    background: none;
 }
+
+/*SE EU QUERO QUE FIQUE FIXO EM UM PONTO EU TENHO QUE USAR PX E NÃO VH, PORQUE O VH VAI DEPENDER DE COMO 
+FICA A TELA*/
+/*OBS PARA MIM MESMO: VH É MELHOR SOMENTE PARA IMAGEM*/
