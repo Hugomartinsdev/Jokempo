@@ -8,6 +8,13 @@ window.onkeydown = function options(keyBoard){
     }else if (keyBoard.key == 3){
         document.getElementById("ChoicePlayer1").value=3
         alert(j1)
+    }else if(keyBoard.key == 8){
+        document.getElementById("ChoicePlayer2").value=8
+    }else if(keyBoard.key == 9){
+        document.getElementById("ChoicePlayer2").value=9
+    }else if (keyBoard.key == 0){
+        document.getElementById("ChoicePlayer2").value=0
+        alert(j1)
     }else if(keyBoard.key == "m" || keyBoard.key == "M"){
         alert("voltando para o menu")
         window.location.href="Menu.html"
@@ -15,21 +22,19 @@ window.onkeydown = function options(keyBoard){
 }
 
 
-
-
 function rodada() {
-   
+   //pedra=8,papel=9,tesoura=0
     const j1=document.getElementById("ChoicePlayer1").value;
-    const b1=Math.floor(Math.random()*3+1);
+    const j2= document.getElementById("ChoicePlayer2").value
     if(j1 ==1){
-        if(b1==2){
-            document.getElementById("resultado").innerHTML=`Jogador1 jogou pedra e o Jpgador2 jogou papel `//perdeu
+        if(j2==9){
+            document.getElementById("resultado").innerHTML=`Jogador1 jogou pedra e o Jpgador2 jogou papel `
             document.getElementById("EscolhaP").src="SRCs/assets/IMGs/pedra.png";
             document.getElementById("EscolhaP2").src="SRCs/assets/IMGs/papel.png";
             pj2=pj2+2;
             
             
-        }else if(b1==3){
+        }else if(j2==0){
             document.getElementById("resultado").innerHTML=`Jogador1 jogou pedra e o Jogador2 jogou tesoura `//ganha
             document.getElementById("EscolhaP").src="SRCs/assets/IMGs/pedra.png";
             document.getElementById("EscolhaP2").src="SRCs/assets/IMGs/tesoura.png";
@@ -49,14 +54,14 @@ function rodada() {
     }
 
     if(j1 ==2){
-        if(b1==2){
+        if(j2==9){
             document.getElementById("resultado").innerHTML=`Jogador1 jogou papel e o Jogador2 jogou papel `//empate
             document.getElementById("EscolhaP").src="SRCs/assets/IMGs/papel.png"
             document.getElementById("EscolhaP2").src="SRCs/assets/IMGs/papel.png";
             pj++;
             pj2++;
 
-        }else if(b1==3){
+        }else if(j2==0){
             document.getElementById("resultado").innerHTML=`Jogador1 jogou papel e o Jogador2 jogou tesoura `//perdeu
             document.getElementById("EscolhaP").src="SRCs/assets/IMGs/papel.png"
             document.getElementById("EscolhaP2").src="SRCs/assets/IMGs/tesoura.png";
@@ -75,12 +80,12 @@ function rodada() {
     }
 
     if(j1 ==3){
-        if(b1==2){
+        if(j2==9){
             document.getElementById("resultado").innerHTML=`Jogador1 jogou tesoura e o Jogador2 jogou papel `//ganha
             document.getElementById("EscolhaP").src="SRCs/assets/IMGs/tesoura.png"
             document.getElementById("EscolhaP2").src="SRCs/assets/IMGs/papel.png";
             pj=pj+2;
-        }else if(b1==3){
+        }else if(j2==0){
             document.getElementById("resultado").innerHTML=`Jogador1 jogou tesoura e o Jogador2 jogou tesoura `//empate
             document.getElementById("EscolhaP").src="SRCs/assets/IMGs/tesoura.png"
             document.getElementById("EscolhaP2").src="SRCs/assets/IMGs/tesoura.png";
@@ -100,7 +105,7 @@ function rodada() {
     }
     if(r==5){
         if (pj>pj2) {
-            setTimeout(alert,110,"Parábens voce ganhou!!");
+            setTimeout(alert,110,"Parábens Jogador 1 ganhou!!");
             document.getElementById("musica2").src="SRCs/assets/audios/06-caught-a-pokemon.mp3";
             document.getElementById("musica2").play();
             
@@ -111,8 +116,8 @@ function rodada() {
             document.getElementById("musica2").play();
         }
         else{
-            setTimeout(alert,410,"Que pena você perdeu!!!");
-            document.getElementById("musica2").src="SRCs/assets/audios/super-mario-death-sound-sound-effect.mp3";           
+            setTimeout(alert,110,"Parábens Jogador 2 ganhou!!");
+            document.getElementById("musica2").src="SRCs/assets/audios/06-caught-a-pokemon.mp3";
             document.getElementById("musica2").play();
         }
     }else if(r>5){
@@ -132,6 +137,7 @@ function zerar() {
     document.getElementById("pointP2").innerHTML=" ";
     document.getElementById("musica2").src="";
     document.getElementById("ChoicePlayer1").value=0;
+    document.getElementById("ChoicePlayer2").value=7;
 }
 
 function musicon(){
