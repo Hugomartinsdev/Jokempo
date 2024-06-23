@@ -29,7 +29,7 @@ body{
 .obs{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left:100px;
     color:rgb(143, 9, 36);
 }
@@ -60,7 +60,7 @@ body{
 
 .config .back{
     position: absolute;
-    top:185px;
+    top:195px;
     left:1000px;
     background: none;
 }
@@ -82,12 +82,24 @@ body{
     background-color: rgb(75, 0, 126);
     margin: 15px;
     margin-left: 80px;
-    height: 345px;
+    height: 338px;
     width: 800px;
 }
 
 .fieldPlayer{
     margin-left: 180px;
+}
+
+.fields .fieldPlayer .choiceP{
+    position: relative;
+    right: 60px;
+    cursor: pointer;
+}
+
+.fields .fieldPlayer .pontJ .pontT{
+    position: relative;
+    right:20px;
+    font-weight: 600;
 }
 
 .fieldPlayer .imagem img {
@@ -96,14 +108,20 @@ body{
 
 .fieldPlayer .jogar{
     margin: 10px;
+    margin-left: 228px;
+    position: relative;
+    right: 60px;
 }
 
 .fieldPlayer .jogar .PlayButton{
     border-radius: 10px;
+    width: 100px;
+    height: 32px;
 }
 
-.choiceP{
-    cursor: pointer;
+.fields .fieldPlayer .jogar .comb{
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .fieldPlayer2{
@@ -129,26 +147,6 @@ body{
     font-size: 4vh;/*essa eu vou deixar vh porque fica melhor definir para cada tela do usuario o tamanho do round*/
 }
 
-.fields .fieldPlayer .choiceP{
-    position: relative;
-    right: 60px;
-}
-
-.fields .fieldPlayer .jogar{
-    position: relative;
-    right: 60px;
-}
-
-.fields .fieldPlayer .jogar .comb{
-    font-weight: 600;
-}
-
-.fields .fieldPlayer .pontJ .pontT{
-    position: relative;
-    right:20px;
-    font-weight: 600;
-}
-
 .fields .fieldPlayer2 .pointP2 .pontP2{
     position:relative;
     top:118px;
@@ -156,13 +154,16 @@ body{
     font-weight: 600;
 }
 
+.fields .fieldPlayer2 .testeP2{
+    position: fixed;
+    top:299px;
+    right:380px;
+
+}
+
 .output{
     display: flex;
     justify-content: center;
     position: relative;
-    bottom:50px;
+    bottom:70px;
 }
-
-/*OQUE FALTA 
-1-ver porque a caixa de opção está se crescendo junto com a imagem
-2-TUDO QUE FALTA NO PvB

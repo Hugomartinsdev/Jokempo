@@ -29,7 +29,7 @@ body{
 .obs{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left:100px;
     color:rgb(143, 9, 36);
 }
@@ -59,7 +59,7 @@ body{
 
 .config .back{
     position: absolute;
-    top:185px;
+    top:195px;
     left:1000px;
     background: none;
 }
@@ -81,7 +81,7 @@ body{
     background-color: rgb(75, 0, 126);
     margin: 15px;
     margin-left: 80px;
-    height: 345px;
+    height: 338px;
     width: 800px;
 }
 
@@ -95,10 +95,19 @@ body{
 
 .fieldPlayer .jogar{
     margin: 10px;
+    position: relative;
+    left:156px;
 }
 
 .fieldPlayer .jogar .PlayButton{
     border-radius: 10px;
+    width: 100px;
+    height: 32px;
+}
+
+.fields .fieldPlayer .jogar .comb{
+    font-weight: 600;
+    font-size:15px;
 }
 
 .choiceP{
@@ -133,14 +142,7 @@ body{
     right: 60px;
 }
 
-.fields .fieldPlayer .jogar{
-    position: relative;
-    right: 60px;
-}
 
-.fields .fieldPlayer .jogar .comb{
-    font-weight: 600;
-}
 
 .fields .fieldPlayer .pontJ .pontT{
     position: relative;
@@ -159,12 +161,5 @@ body{
     display: flex;
     justify-content: center;
     position: relative;
-    bottom:50px;
+    bottom:70px;
 }
-
-/*OQUE FALTA 
-1-VER SE DEIXO SO AS REGRAS COM A BORDA AO REDOR
-2-Ver se existe algum jeito de transformar as medidas quando o usuario aperta f11 ou cria outro doc caso isso ocorra
-3-Se não conseguir/não quiser a 2 eu so não faço ou se fizer para f11 eu aviso ao usuario para utlizar f11 para uma melhor experiencia
-4-ver se eu faço a caixa de respotas e o botão mas a esquerda de onde a imagem do jogador vai aparecer
-5-TALVEZ, MAS BEM TALVEZ,fazer a detecção com f11 e mudar para vh, ou mudar os pixels de tudo para a mudança com tela cheia
