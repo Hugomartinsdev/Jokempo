@@ -21,8 +21,9 @@
                 <li>Aperte o botão começar para jogar.</li>
                 <li>Cada vitoria da 2 pontos e empate 1 ponto para cada.</li>
                 <li>Depois de 5 rodadas quem tiver ganhado mais pontos ganha o jogo.</li>
+                <li>As opçoes no teclado, caso queira usar, são 1,2,3 para o P1 e 8,9,0 para o P2 pedra papel e tesoura respactivamnete</li>
             </ol>
-            <p class="obs">OBS:Pode ser usado as teclas do teclado para escolher as opçoes</p>
+            <p class="obs">OBS:Para voltar para o menu aperter o botão escrito menu ou aperte m no teclado</p>
             <Button onclick="zerar()" class="reset">
                <span class="retb"> Reiniciar</span>
             </Button>
@@ -33,7 +34,7 @@
                     <span>Música:</span>
                 </div>
                 <button class="musicButton" onclick="musicon()">
-                    <span id="MusicBt">off</span><!-- colocar o simbolozinho de som para colocar e tirar som, quem sabe fazer uma animação de mudo e nao mudo-->
+                    <span id="MusicBt">off</span>
                 </button>
             </div>
             <div class="back">
@@ -54,16 +55,15 @@
                 </p>
             </div>
             <div class="fieldPlayer">
-                <!--tentar colocar as imagens quando for escrevendo as opções-->
                 <select id="ChoicePlayer1" class="choiceP">
-                    <option value="0">escolha</option>
-                    <option value="1">1-Pedra</option>
-                    <option value="2">2-Papel</option>
-                    <option value="3">3-Tesoura</option>
+                    <option value="0">Escolha</option>
+                    <option value="1">*******</option>
+                    <option value="2">*******</option>
+                    <option value="3">*******</option>
                 </select>
                 <div class="jogar" >
                     <button class="PlayButton" onclick="rodada()">
-                       <span class="comb">jogador 1</span>
+                       <span class="comb">Disputa</span>
                     </button>
                 </div>
                 <div class="imagem">
@@ -75,15 +75,12 @@
             </div>
             
             <div class="fieldPlayer2">
-                <select id="ChoicePlayer2" class="choiceP2">
-                    <option value="7">escolha</option>
-                    <option value="8">pedra</option>
-                    <option value="9">papel</option>
-                    <option value="0">tesoura</option>
+                <select id="ChoicePlayer2" class="testeP2">
+                    <option value="7">Escolha</option>
+                    <option value="8">*******</option>
+                    <option value="9">*******</option>
+                    <option value="0">*******</option>
                 </select>
-                <div class="teste">
-                    <button>hhf</button>
-                </div>
                 <div class="imagemP2">
                     <img src=""  id="EscolhaP2">
                 </div>
@@ -102,8 +99,5 @@
       <audio loop id="musica" class="musica">
         <source src="SRCs/assets/audios/musica de fundo.mpeg" type="audio/mpeg">
       </audio>
-    
-</body>
-</html>
 </body>
 </html>

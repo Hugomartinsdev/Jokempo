@@ -23,28 +23,36 @@
                     <span>Qual modo de jogo você quer jogar?</span>
                 </div>
                 <div class="choices">
-                        <a href="PvP.html"><!--quando eu fizer os do player-->
+                        <a href="PvP.html">
                             <button class="choice1">
-                                1-Player vs Player
+                               <span class="textPvP">1-Player vs Player</span>
                             </button>
                         </a>
                         <a href="pvb.html">
                             <button class="choice2">
-                                2-Player vs Bot
+                                <span class="textPvB">2-Player vs Bot</span>
                             </button>
                         </a>
-
-                        <p class="obs">Pode se usar as teclas do teclado para escolher opções
-                                       e dentro dos modos de jogo aperte a tecla "m" para voltar ao menu ou o botão
-                        </p>
+                        <div class="contour">
+                            <p class="obs">Pode se usar as teclas do teclado para escolher opções
+                                e dentro dos modos de jogo aperte a tecla "m" para voltar ao menu 
+                                ou o botão com o mesmo nome
+                            </p>
+                        </div>
+                        
                 </div>
                 <div class="config">
+                    <div class="exit">
+                        <button class="leave" onclick="exit()">
+                            <span class="textE">Sair</span>
+                        </button>
+                    </div>
                     <div class="music">
                         <div class="textMusic">
                             <span>Música:</span>
                         </div>
                         <button class="musicButton" onclick="musicon()">
-                            <span id="MusicBt">off</span><!-- colocar o simbolozinho de som para colocar e tirar som, quem sabe fazer uma animação de mudo e nao mudo-->
+                            <span id="MusicBt">off</span>
                         </button>
                     </div>
                 </div>
@@ -56,9 +64,3 @@
       </audio>
 </body>
 </html>
-
-<!--
-1-ver se consigo algum jeito de coloca imagem de volume
-2-se conseguir consiliar a troca de imagem,mudo e com som, com a cdigo do js, se a primeira for concluida com suceso -
-3- se conseguir fazer a 2 botar uma opção com fechar a janela(sair do jogo)
-4- se conseguir implementar a 3 implementar nos outros um esquema parecido, mas tentar fazer um tres linhas e quando apertar aparecer opçoes de voltar ao menu e sair->

@@ -28,7 +28,7 @@ function rodada() {
     const j2= document.getElementById("ChoicePlayer2").value
     if(j1 ==1){
         if(j2==9){
-            document.getElementById("resultado").innerHTML=`Jogador1 jogou pedra e o Jpgador2 jogou papel `
+            document.getElementById("resultado").innerHTML=`Jogador1 jogou pedra e o Jogador2 jogou papel `
             document.getElementById("EscolhaP").src="SRCs/assets/IMGs/pedra.png";
             document.getElementById("EscolhaP2").src="SRCs/assets/IMGs/papel.png";
             pj2=pj2+2;
@@ -153,28 +153,3 @@ function musicon(){
 
     }
 }
-
-
-
-//fase de teste
-function Reiniciar(){
-    var t =prompt("Você quer reiniciar automaticamente?");
-    if(t=="sim" || t==""){
-        alert("ok,reiniciando");//talvez fazer um coisa continuo,
-                                //acho que tem como de deixar a mensagem continuo 
-        zerar();
-
-    }else if(t=="não" || t=="nao"){
-        alert("tudo bem,quando quiser reiniciar aperte o botao com o mesmo nome");
-    }
-}
-//estudar mais sobre setTimeOut.
-
-
-/*OQUE FALTA FAZER
-1-TENTAR FAZER EM UM WHILE,SO SE EU QUIZER, fazer isso em um outro codigo
-2-tentar usar um prompt ou alert com sim e não para ver ve a pessoa que que seja reiniciado o jogo automaticamente.
-3-TENTAR FAZER FUNCIONAR O PROMPT COM A FINÇÃO REINICIAR
-4-tentat fazer funcionar essa função de reinicirar
-5-posso fazer teclas diferentes,ai eu posso fazer aquele esquema do if else
-6-testar com usuarios para ver se els gostam da ideia do 5 e perguntar sugestoes de como melhorar ou criar metodos deles*/

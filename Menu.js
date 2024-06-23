@@ -22,3 +22,10 @@ window.onkeydown = function options(keyBoard){
          window.location.href="Pvb.html"
     }
 }
+
+function exit(){
+    alert("Saindo")
+    alert("olha meus outros trabalhos")
+    window.location.href="https://github.com/dashboard"
+    
+}

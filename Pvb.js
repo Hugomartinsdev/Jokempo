@@ -141,26 +141,3 @@ function musicon(){
 
     }
 }
-
-
-
-//fase de teste
-function Reiniciar(){
-    var t =prompt("Você quer reiniciar automaticamente?");
-    if(t=="sim" || t==""){
-        alert("ok,reiniciando");//talvez fazer um coisa continuo,
-                                //acho que tem como de deixar a mensagem continuo 
-        zerar();
-
-    }else if(t=="não" || t=="nao"){
-        alert("tudo bem,quando quiser reiniciar aperte o botao com o mesmo nome");
-    }
-}
-//estudar mais sobre setTimeOut.
-
-
-/*OQUE FALTA FAZER
-1-TENTAR FAZER EM UM WHILE,SO SE EU QUIZER, fazer isso em um outro codigo
-2-tentar usar um prompt ou alert com sim e não para ver ve a pessoa que que seja reiniciado o jogo automaticamente.
-3-TENTAR FAZER FUNCIONAR O PROMPT COM A FINÇÃO REINICIAR
-4-tentat fazer funcionar essa função de reinicirar*/
