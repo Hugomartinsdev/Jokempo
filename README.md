@@ -2,7 +2,7 @@
 Projeto criado com HTML5,JavaScript, e CSS<br>
 Jogo de jokempo com menu com opção de jogar com PvP ,de 2 pessoas, e jogar Player vs Bot
 
-# Como se jogar
+## Como se jogar
 
 1-Abra a aba/arquivo HTML de menu,arquivo está com esse mesmo nome,ela mostrará quais são os modos e como acessá-los<br>
 2-escolha entre os modos singleplayer(Jogador x BOT) e multiplayer(Jogador x Jogador)
